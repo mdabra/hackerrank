@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+lst = []
+print "<<<<<Please enter number of lines of command as an integer>>>>>"
+numb = int(raw_input())
+for _ in range(numb):
+    print "enter commands"
+    command = raw_input().split()
+    print '\ninput command is: ', command
+    cmd = command[0]
+    print "real command is ", cmd
+    args = command[1:]
+    print "args are ", args
+    if cmd != "print":
+        cmd1 = "lst.{}({},{})".format(cmd,command[1],command[2])
+        exec(cmd1)
+        print lst
+    else: print lst
