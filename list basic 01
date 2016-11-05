@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#my first gitHub Code :-)
 lst = []
 print "<<<<<Please enter number of lines of command as an integer>>>>>"
 numb = int(raw_input())
