@@ -1,18 +1,16 @@
-#!/usr/bin/python
-#my first gitHub Code :-)
 lst = []
-print "<<<<<Please enter number of lines of command as an integer>>>>>"
-numb = int(raw_input())
-for _ in range(numb):
-    print "enter commands"
-    command = raw_input().split()
-    print '\ninput command is: ', command
-    cmd = command[0]
-    print "real command is ", cmd
+num = int(input("Please enter a number that will refer number of lines you want to enter:"))
+print ("You have entered {} number".format(num))
+for _ in range(num):
+    command = input("Please enter a command:").split()
+    com = command[0]
     args = command[1:]
-    print "args are ", args
-    if cmd != "print":
-        cmd1 = "lst.{}({},{})".format(cmd,command[1],command[2])
-        exec(cmd1)
-        print lst
-    else: print lst
+    print("Command Entered {0} and Agrs Entered {1}".format(com, args))
+    if com=="print":
+        print(lst)
+    else:
+        finalarg = com + "(" + ",".join(args) + ")"
+        finalcommand = "lst.{}".format(finalarg)
+        exec(finalcommand)
+        print ("list is equal to:",lst)
+
