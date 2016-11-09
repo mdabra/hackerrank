@@ -1,0 +1,11 @@
+'''Given an integer, n , and n space-separated integers as input, create a tuple, t, of those n integers. 
+Then compute and print the result of hash(t)'''
+
+number = int(input())
+number_string = input()
+number_list = number_string.split()
+for i in range(0,number):
+    number_list[i]=int(number_list[i])
+    
+t = tuple(number_list)
+print(hash(t))
