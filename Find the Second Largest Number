@@ -1,0 +1,8 @@
+#Find the Second Largest Number
+input1 = input()
+list1 = [int(x) for x in input().split()]
+z = max(list1)
+while max(list1)== z:
+    list1.remove(z)
+
+print('the second max number is',max(list1))
