@@ -1,0 +1,22 @@
+from operator import itemgetter
+
+NumberOfStudents = int(input())
+list1 = [[] for _ in range(NumberOfStudents)]
+for i in range(NumberOfStudents):
+    list1[i].append(input())
+    list1[i].append(float(input()))
+list1.sort(key=itemgetter(1, 0))
+
+p = 0
+for i in range(NumberOfStudents - 1):
+    if list1[0][1] == list1[i][1]:
+        p += 1
+
+for _ in range(p):
+    list1.pop(0)
+
+
+for i in range(NumberOfStudents-p):
+    if list1[0][1] == list1[i][1]:
+        print(list1[i][0])
+
